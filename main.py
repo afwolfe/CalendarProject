@@ -26,7 +26,7 @@ def run_tests():
 You'll need to define your 3 functions here.
 * `is_leap_year(year)`: This function should take the year entered by the user as a parameter. This function should return `True` if a year is a leap year, and `False` if it is not. This information will be used by other functions. [What is a Leap Year?](https://www.timeanddate.com/date/leapyear.html)
 * `number_of_days(month, year)`: This function should take integers representing the month and year entered by the user as parameters. This function should return an integer with [how many days are in the given month](https://www.timeanddate.com/calendar/months/).
-* `days_left(day, month, year)`: This function should take integers representing the day, month, and year entered by the user as parameters. This function should calculate the number of days left in the year, and return an integer with of number of days left. The date the user entered should **not** be included in the count of how many days are left.
+* `days_left_in_year(day, month, year)`: This function should take integers representing the day, month, and year entered by the user as parameters. This function should calculate the number of days left in the year, and return an integer with of number of days left. The date the user entered should **not** be included in the count of how many days are left.
 """
 
 def main():

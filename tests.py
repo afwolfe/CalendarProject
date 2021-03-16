@@ -53,7 +53,7 @@ def test_number_of_days():
 
 def test_random_days_left():
   """
-  This test case runs days_left with various parameters and checks that the returned values are correct.
+  This test case runs days_left_in_year with various parameters and checks that the returned values are correct.
   """
 
   for m in range(1,13): # for each month
@@ -61,20 +61,20 @@ def test_random_days_left():
       days = random.sample(range(1, 29), 10)
       for d in days: # Check both leap year and non-leap year
         date = datetime.date(2000,m,d)
-        assert Calendar.days_left(d, m, 2000) == (datetime.date(2000, 12, 31) - date).days
+        assert Calendar.days_left_in_year(d, m, 2000) == (datetime.date(2000, 12, 31) - date).days
         date = datetime.date(1999,m,d)
-        assert Calendar.days_left(d, m, 1999) == (datetime.date(1999, 12, 31) - date).days
+        assert Calendar.days_left_in_year(d, m, 1999) == (datetime.date(1999, 12, 31) - date).days
     else:
       days = random.sample(range(1, calendar.monthrange(2000, m)[1]+1), 10)
       for d in days:
         date = datetime.date(2000,m,d)
-        assert Calendar.days_left(d, m, 2000) == (datetime.date(2000, 12, 31) - date).days
+        assert Calendar.days_left_in_year(d, m, 2000) == (datetime.date(2000, 12, 31) - date).days
   
 def test_docstrings():
   """Checks for the existence of docstrings."""
   assert Calendar.is_leap_year.__doc__
   assert Calendar.number_of_days.__doc__
-  assert Calendar.days_left.__doc__
+  assert Calendar.days_left_in_year.__doc__
 
 def test_sample1(monkeypatch, capsys):
   """Using Sample Run 1 values, this test case checks for 31 in your program's output."""
